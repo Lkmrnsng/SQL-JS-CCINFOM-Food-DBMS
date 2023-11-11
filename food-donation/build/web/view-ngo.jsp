@@ -40,18 +40,19 @@
                 exclude_city,
                 exclude_ngodesc
             );
-            
+            for(int i = 0; i < al_results.get(0).size(); i++)
+            {
         %>
-        <%= lower_bound %>|
-        <%= upper_bound %>|
-        <%= include_name %>|
-        <%= include_barangay %>|
-        <%= include_city %>|
-        <%= include_ngodesc %>|
-        <%= exclude_name %>|
-        <%= exclude_barangay %>|
-        <%= exclude_city %>|
-        <%= exclude_ngodesc %>|
+            <%= al_results.get(0).get(i) + " |" %>
+            <%= al_results.get(1).get(i) + " |" %>
+            <%= al_results.get(2).get(i) + " |" %>
+            <%= al_results.get(3).get(i) + " |" %>
+            <%= al_results.get(4).get(i) + " |" %>
+            <%= al_results.get(5).get(i) + " |" %>
+            <br>
+        <%
+            }
+        %>
         <a href="index.html">Back to Index</a>
     </body>
 </html>
